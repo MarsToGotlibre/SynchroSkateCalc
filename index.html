@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y43BQ5433"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y43BQ5433"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-2Y43BQ5433');
-  gtag('config', 'UA-115566042-2');
-</script>
+    gtag('config', 'G-2Y43BQ5433');
+    gtag('config', 'UA-115566042-2');
+  </script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <script src="basevalues.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>SkateCalc</title>
 </head>
+
 <body>
 
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>FSCalc is now SkateCalc!</strong> You can find us at <a href="https://www.skatecalc.com">www.skatecalc.com</a>
+    <strong>FSCalc is now SkateCalc!</strong> You can find us at <a
+      href="https://www.skatecalc.com">www.skatecalc.com</a>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -42,19 +53,27 @@
       <div class="col-md-6">
         <!-- <h5>Selected element</h5> -->
         <div id="elem-disp-div">
+
+          <!-- Cadre avec l'element et le GOE -->
           <!-- <p id="elem-disp"><span id=goeDisplay>test</span></p>  -->
           <span id="elem-disp">Element</span><span id="goeDisplay">GOE</span>
         </div>
-        <nav>
+        <nav> <!-- La bare qui permet de choisir les types d'éléments -->
           <div class="nav nav-tabs" id="ele-sel-nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-jmp-tab" data-toggle="tab" href="#nav-jmp" role="tab" aria-controls="nav-jmp" aria-selected="true">Jumps</a>
-            <a class="nav-item nav-link" id="nav-sp-tab" data-toggle="tab" href="#nav-sp" role="tab" aria-controls="nav-sp" aria-selected="false">Spins</a>
-            <a class="nav-item nav-link" id="nav-seq-tab" data-toggle="tab" href="#nav-seq" role="tab" aria-controls="nav-seq" aria-selected="false">Sequences</a>
-            <a class="nav-item nav-link" id="nav-pcs-tab" data-toggle="tab" href="#nav-pcs" role="tab" aria-controls="nav-pcs" aria-selected="false">PCS</a>
+            <!-- Le role tabliste permet d'afficher plusieurs  parties sur la meme page -->
+            <a class="nav-item nav-link active" id="nav-jmp-tab" data-toggle="tab" href="#nav-jmp" role="tab"
+              aria-controls="nav-jmp" aria-selected="true">Jumps</a>
+            <a class="nav-item nav-link" id="nav-sp-tab" data-toggle="tab" href="#nav-sp" role="tab"
+              aria-controls="nav-sp" aria-selected="false">Spins</a>
+            <a class="nav-item nav-link" id="nav-seq-tab" data-toggle="tab" href="#nav-seq" role="tab"
+              aria-controls="nav-seq" aria-selected="false">Sequences</a>
+            <a class="nav-item nav-link" id="nav-pcs-tab" data-toggle="tab" href="#nav-pcs" role="tab"
+              aria-controls="nav-pcs" aria-selected="false">PCS</a>
 
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
+          <!-- table sauts -->
           <div class="tab-pane fade show active nav-jmp" id="nav-jmp" role="tabpanel" aria-labelledby="nav-jmp-tab">
             <h3>Add Jump</h3>
             <h6>Type</h6>
@@ -120,6 +139,8 @@
               <button type="button" class="btn btn-outline-success addElement">Add Element</button>
             </div>
 
+
+            <!-- table pour les spin -->
           </div>
           <div class="tab-pane fade nav-sp" id="nav-sp" role="tabpanel" aria-labelledby="nav-sp-tab">
             <h3>Add Spin</h3>
@@ -183,6 +204,7 @@
             </div>
           </div>
 
+          <!-- table pour les seq -->
           <div class="tab-pane fade nav-seq" id="nav-seq" role="tabpanel" aria-labelledby="nav-seq-tab">
             <h3>Add Sequence</h3>
 
@@ -240,22 +262,30 @@
 
           </div>
 
+          <!-- table pour les pcs -->
           <div class="tab-pane fade nav-pcs" id="nav-pcs" role="tabpanel" aria-labelledby="nav-pcs-tab">
             <h3>Program Component Score</h3>
-            <p id="factor"><span>Factor: </span><span><input type="number" id="pcs-factor-box" class="pcs" value="1.67"></span></p>
+            <p id="factor"><span>Factor: </span><span><input type="number" id="pcs-factor-box" class="pcs"
+                  value="1.67"></span></p>
 
             <!-- <p><label for="pcs-tr">Transitions</label>&nbsp;&nbsp;<input type="number" value ="0.00" class="pcs" id="pcs-tr-box" min="0" max="10" step="0.25"></p>
             <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value ="0.00" min="0" max="10" step="0.25" id="pcs-tr-slider"></p>
  -->
 
-            <p><label for="pcs-co">Composition</label>&nbsp;&nbsp;<input type="number" value ="0.00" class="pcs" id="pcs-co-box" min="0" max="10" step="0.25"></p>
-            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value ="0.00" min="0" max="10" step="0.25" id="pcs-co-slider"></p>
-            
-            <p><label for="pcs-pr">Presentation</label>&nbsp;&nbsp;<input type="number" value ="0.00" class="pcs" id="pcs-pr-box" min="0" max="10" step="0.25"></p>
-            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value ="0.00" min="0" max="10" step="0.25" id="pcs-pr-slider"></p>
+            <p><label for="pcs-co">Composition</label>&nbsp;&nbsp;<input type="number" value="0.00" class="pcs"
+                id="pcs-co-box" min="0" max="10" step="0.25"></p>
+            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value="0.00" min="0" max="10" step="0.25"
+                id="pcs-co-slider"></p>
 
-            <p><label for="pcs-ss">Skating Skills</label>&nbsp;&nbsp;<input type="number" value ="0.00" class="pcs" id="pcs-ss-box" min="0" max="10" step="0.25"></p>
-            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value ="0.00" min="0" max="10" step="0.25" id="pcs-ss-slider"></p>
+            <p><label for="pcs-pr">Presentation</label>&nbsp;&nbsp;<input type="number" value="0.00" class="pcs"
+                id="pcs-pr-box" min="0" max="10" step="0.25"></p>
+            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value="0.00" min="0" max="10" step="0.25"
+                id="pcs-pr-slider"></p>
+
+            <p><label for="pcs-ss">Skating Skills</label>&nbsp;&nbsp;<input type="number" value="0.00" class="pcs"
+                id="pcs-ss-box" min="0" max="10" step="0.25"></p>
+            <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value="0.00" min="0" max="10" step="0.25"
+                id="pcs-ss-slider"></p>
 
             <!-- <p><label for="pcs-in">Interpretation of the Music</label>&nbsp;&nbsp;<input type="number" id="pcs-in-box" value ="0.00" class="pcs" min="0" max="10" step="0.25"></p>
             <p>&nbsp;&nbsp;<input type="range" class="custom-range pcs-slider" value ="0.00" min="0" max="10" step="0.25" id="pcs-in-slider"></p> -->
@@ -265,10 +295,13 @@
 
         </div>
       </div>
+
+      <!-- partie de doirte avec le calcul -->
       <div class="col-md-6">
         <table class="table table-striped">
           <thead>
             <tr>
+              <!-- scope=col signifie que l'entete s'applique pour les colonnes -->
               <th scope="col">#</th>
               <th scope="col">Executed Element</th>
               <th scope="col">Base Value</th>
@@ -279,6 +312,7 @@
             </tr>
           </thead>
           <tbody class="displayTable">
+            <!-- éléments à ajouter -->
             <!-- <tr>
             <td>1</td>
             <td>1A&lt;*</td>
@@ -288,17 +322,18 @@
             <td>1.6</td>
             <td><i class="delete far fa-trash-alt"></i></td>
           </tr> -->
-        </tbody>
-      </table>
-      <p id="tes-box"><span>Technical Element Score: </span><span id="tes">0.00</span></p>
-      <p id="pcs-box"><span>Program Component Score: </span><span id="pcs">0.00</span></p>
-      <p id="tss-box"><span>Total Segment Score: </span><span id="tss">0.00</span></p>
+          </tbody>
+        </table>
+        <p id="tes-box"><span>Technical Element Score: </span><span id="tes">0.00</span></p>
+        <p id="pcs-box"><span>Program Component Score: </span><span id="pcs">0.00</span></p>
+        <p id="tss-box"><span>Total Segment Score: </span><span id="tss">0.00</span></p>
+      </div>
     </div>
+
+    <hr />
+    <p><small>version 0.2.3 &centerdot; <a href="https://github.com/hjjerrychen/skatecalc">GitHub</a></small></p>
   </div>
 
-  <hr />
-  <p><small>version 0.2.3 &centerdot; <a href="https://github.com/hjjerrychen/skatecalc">GitHub</a></small></p>
-</div>
-
 </body>
+
 </html>
