@@ -1,0 +1,11 @@
+/* Bootstrap Personalistion
+ */
+.nav-pills .nav-link {
+    border-radius: 50px;
+    /*     background-color: blueviolet;*/
+    color: blueviolet;
+}
+
+.nav-pills .nav-link.active {
+    background-color: blueviolet;
+}
