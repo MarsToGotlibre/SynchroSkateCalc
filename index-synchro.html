@@ -15,15 +15,17 @@
 </head>
 
 <body>
-    <header>
-        <h1>SynchroCalc</h1>
-    </header>
+    <nav class="navbar navbar-expand-md bg-body border-bottom">
+        <div class="container-fluid">
+            <h1>SynchroCalc</g1>
+        </div>
+    </nav>
 
     <main class=" page container-fluid">
         <div class="row g-3"> <!-- à supprimer ou changer si possible -->
             <section class="col-12 col-lg-6 "> <!-- Element Choice and PCS -->
                 <div class="Card shadow-sm"> <!-- PCS -->
-                    <h2>Element Composer</h2>
+                    <h2 class="section-title">Element Composer</h2>
 
                     <div class="div-elem-disp">Element</div>
 
@@ -53,7 +55,103 @@
                         </div>
                         <div class="tab-pane fade" id="pills-intersection-no-hold" role="tabpanel"
                             aria-labelledby="pills-profile-tab" tabindex="0">
-                            ...
+                            <div class="d-flex  flex-wrap col-12">
+                                <div class="mb-3 col-6 ">
+                                    <div class="col-12 mb-3">
+                                        <h6>Elements</h6>
+                                        <div class="btn-group align-items-center" role=" group" aria-label="I and NHE">
+                                            <input type="radio" class="btn-check" name="INHE" id="btnI"
+                                                autocomplete="off">
+                                            <label class="rounded-start-pill btn btn-outline-secondary" for="btnI"> I
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="INHE" id="btnNHE"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary rounded-end-circle"
+                                                for="btnNHE">NHE</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <h6>Levels</h6>
+
+                                        <div class="btn-group" role="group" aria-label="Levels INHE">
+                                            <input type="radio" class="btn-check" name="Levels INHE" id="LvlB"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third rounded-start-pill" for="LvlB">
+                                                B</label>
+
+                                            <input type="radio" class="btn-check" name="Levels INHE" id="Lvl1"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl1">1</label>
+
+                                            <input type="radio" class="btn-check" name="Levels INHE" id="Lvl2"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl2">2</label>
+
+                                            <input type="radio" class="btn-check" name="Levels INHE" id="Lvl3"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl3">3</label>
+
+                                            <input type="radio" class="btn-check" name="Levels INHE" id="Lvl4"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third rounded-end-circle" for="Lvl4">4</label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-6 ">
+                                    <div class="col-12 mb-3">
+                                        <h6>Additional Feature</h6>
+                                        <div class="btn-group align-items-center" role=" group" aria-label="I and NHE">
+                                            <input type="radio" class="btn-check" name="sPi" id="btnPi"
+                                                autocomplete="off">
+                                            <label class="rounded-start-pill btn btn-outline-secondary" for="btnPi"> Pi
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="sPi" id="btns"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary" for="btns">s</label>
+                                            <input type="radio" class="btn-check" name="sPi" id="btnNone"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary rounded-end-circle"
+                                                for="btnNone">-</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <h6>Levels</h6>
+
+                                        <div class="btn-group" role="group" aria-label="Levels Pis">
+                                            <input type="radio" class="btn-check" name="Levels sPi" id="LvlB sPi"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third rounded-start-pill" for="LvlB sPi">
+                                                B</label>
+
+                                            <input type="radio" class="btn-check" name="Levels sPi" id="Lvl1 sPi"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl1 sPi">1</label>
+
+                                            <input type="radio" class="btn-check" name="Levels sPi" id="Lvl2 sPi"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl2 sPi">2</label>
+
+                                            <input type="radio" class="btn-check" name="Levels sPi" id="Lvl3 sPi"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third" for="Lvl3 sPi">3</label>
+
+                                            <input type="radio" class="btn-check" name="Levels sPi" id="Lvl4 sPi"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-third rounded-end-circle"
+                                                for="Lvl4 sPi">4</label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                         <!-- Other -->
