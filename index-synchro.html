@@ -344,6 +344,42 @@
 
                     </div>
                 </div>
+                <!-- PCS -->
+                <div class="Card shadow-sm mt-3">
+                    <!-- Name and Factor -->
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="section-title">PCS</h6>
+                        <div class="input-group input-group-sm" style="width: 180px;">
+                            <span class="input-group-text">Factor</span>
+                            <input type="number" class="form-control" id="pcs-factor" value="2.67" step="0.01">
+                        </div>
+                    </div>
+
+                    <!-- Components selector -->
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label mb-0" for="pcs-co">Composition</label>
+                                <span class="badge text-bg-secondary" id="pcs-co-val">0.00</span>
+                            </div>
+                            <input id="pcs-co" type="range" class="form-range" min="0" max="10" step="0.25" value="0">
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label mb-0" for="pcs-pr">Presentation</label>
+                                <span class="badge text-bg-secondary" id="pcs-pr-val">0.00</span>
+                            </div>
+                            <input id="pcs-pr" type="range" class="form-range" min="0" max="10" step="0.25" value="0">
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label mb-0" for="pcs-ss">Skating Skills</label>
+                                <span class="badge text-bg-secondary" id="pcs-ss-val">0.00</span>
+                            </div>
+                            <input id="pcs-ss" type="range" class="form-range" min="0" max="10" step="0.25" value="0">
+                        </div>
+                    </div>
+                </div>
 
             </section>
             <section> <!-- Program calcul -->
