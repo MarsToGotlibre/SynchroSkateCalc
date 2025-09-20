@@ -1,7 +1,7 @@
 # SynchroSkateCalc
 A JavaScript calculator for Synchronized skating based on ISU rules.
 This Repo is a fork from [SkateCalc](https://github.com/hjjerrychen/skatecalc).  
-The UI Is an adaptiation from this from the [Figure Skating Score](https://github.com/benzousilvia/Figure-Skating-Score).
+The UI Is an adaptiation from the [Figure Skating Score](https://github.com/benzousilvia/Figure-Skating-Score) UI.
 
 ## Objectives
 This project aims to:
