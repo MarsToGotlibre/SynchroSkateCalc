@@ -14,7 +14,7 @@
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style-synch.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -34,9 +34,9 @@
 
                     <ul class="nav nav-pills my-3 " id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link " id="pills-block-lines-tab" data-bs-toggle="pill"
+                            <button class="nav-link  active " id="pills-block-lines-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-block-lines" type="button" role="tab"
-                                aria-controls="pills-block-lines" aria-selected="false">Linear and Rotating
+                                aria-controls="pills-block-lines" aria-selected="true">Linear and Rotating
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -46,15 +46,15 @@
                                 Hold</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-other-tab" data-bs-toggle="pill"
+                            <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-other" type="button" role="tab"
-                                aria-selected="true">Other</button>
+                                aria-selected="false">Other</button>
                         </li>
                     </ul>
 
                     <!-- Linear and Rotating -->
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade " id="pills-block-lines" role="tabpanel"
+                        <div class="tab-pane fade show active " id="pills-block-lines" role="tabpanel"
                             aria-labelledby="pills-block-lines-tab" tabindex="0">
                             <div class="mb-3">
                                 <h6>Elements</h6>
@@ -75,12 +75,13 @@
                             </div>
                             <div class="mb-3">
                                 <h6>Specifications</h6>
-                                <div class="btn-group align-items-center" role=" group" aria-label="Specifications">
-                                    <input type="radio" class="btn-check" name="Specifications" id="btnA"
+                                <div class="btn-group align-items-center" role=" group" aria-label="Specifications"
+                                    id="Specifications">
+                                    <input type="checkbox" class="btn-check" name="Specifications" id="btnA"
                                         autocomplete="off">
                                     <label class="rounded-start-pill btn btn-outline-secondary" for="btnA">A</label>
 
-                                    <input type="radio" class="btn-check" name="Specifications" id="btnP"
+                                    <input type="checkbox" class="btn-check" name="Specifications" id="btnP"
                                         autocomplete="off">
                                     <label class="rounded-end-circle btn btn-outline-primary" for="btnP">P</label>
                                 </div>
@@ -101,7 +102,7 @@
                                         <div class="btn-group align-items-center" role=" group" aria-label="I and NHE">
                                             <input type="radio" class="btn-check" name="INHE" id="btnI"
                                                 autocomplete="off">
-                                            <label class="rounded-start-pill btn btn-outline-secondary" for="btnI"> I
+                                            <label class="rounded-start-pill btn btn-outline-primary" for=" btnI"> I
                                             </label>
 
                                             <input type="radio" class="btn-check" name="INHE" id="btnNHE"
@@ -145,19 +146,18 @@
                                     <div class="col-12 mb-3">
                                         <!-- addtional feature pi or s -->
                                         <h6>Additional Feature</h6>
-                                        <div class="btn-group align-items-center" role=" group" aria-label="I and NHE">
-                                            <input type="radio" class="btn-check" name="sPi" id="btnPi"
+                                        <div class="btn-group align-items-center" role=" group"
+                                            aria-label="Additional Feature" id="Additional_feature">
+                                            <input type="checkbox" class="btn-check" name="sPi" id="btnPi"
                                                 autocomplete="off">
-                                            <label class="rounded-start-pill btn btn-outline-secondary" for="btnPi"> Pi
+                                            <label class="rounded-start-pill btn btn-outline-primary" for="btnPi"> Pi
                                             </label>
 
-                                            <input type="radio" class="btn-check" name="sPi" id="btns"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-secondary" for="btns">s</label>
-                                            <input type="radio" class="btn-check" name="sPi" id="btnNone"
+                                            <input type="checkbox" class="btn-check" name="sPi" id="btns"
                                                 autocomplete="off">
                                             <label class="btn btn-outline-secondary rounded-end-circle"
-                                                for="btnNone">-</label>
+                                                for="btns">s</label>
+
 
                                         </div>
                                     </div>
@@ -196,8 +196,8 @@
                         </div>
 
                         <!-- Other -->
-                        <div class="tab-pane fade show active" id="pills-other" role="tabpanel"
-                            aria-labelledby="pills-other-tab" tabindex="0">
+                        <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab"
+                            tabindex="0">
 
                             <div class="col-12 mb-3">
                                 <h6>Elements</h6>
@@ -263,13 +263,14 @@
                             <div class="col-12 mb-3">
                                 <h6>Downgrades</h6>
 
-                                <div class="btn-group btn-group-sm " role=" group" aria-label="Downgrades">
-                                    <input type="radio" class="btn-check" name="Downgradables" id="1downgrade"
+                                <div class="btn-group btn-group-sm " role=" group" aria-label="Downgrades"
+                                    id="Downgrades">
+                                    <input type="checkbox" class="btn-check" name="Downgradables" id="1downgrade"
                                         autocomplete="off">
                                     <label class="rounded-start-pill btn btn-outline-secondary" for="1downgrade"> &lt;
                                     </label>
 
-                                    <input type="radio" class="btn-check" name="Downgradables" id="2downgrade"
+                                    <input type="checkbox" class="btn-check" name="Downgradables" id="2downgrade"
                                         autocomplete="off">
                                     <label class="btn btn-outline-secondary rounded-end-circle"
                                         for="2downgrade">&lt;&lt;</label>
@@ -307,7 +308,7 @@
                         </div>
                         <h6>GOE</h6>
 
-                        <div class="btn-group btn-group-sm" role="group" aria-label="GOE">
+                        <div class="btn-group btn-group-sm " role="group" aria-label="GOE">
                             <input type="radio" class="btn-check" name="GOE" id="GOE-5" autocomplete="off">
                             <label class="btn btn-outline-danger rounded-start-pill" for="GOE-5"> -5 </label>
 
