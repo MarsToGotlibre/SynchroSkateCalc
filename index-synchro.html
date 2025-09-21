@@ -59,11 +59,13 @@
                             <div class="mb-3">
                                 <h6>Elements</h6>
                                 <div class="btn-group align-items-center" role=" group"
-                                    aria-label="Lines and Rotational">
-                                    <input type="radio" class="btn-check" name="LR" id="btnC" autocomplete="off">
+                                    aria-label="Lines and Rotational" id="LR">
+                                    <input type="radio" class="btn-check NonPivoting" name="LR" id="btnC"
+                                        autocomplete="off">
                                     <label class="rounded-start-pill btn btn-outline-secondary" for="btnC">C</label>
 
-                                    <input type="radio" class="btn-check" name="LR" id="btnW" autocomplete="off">
+                                    <input type="radio" class="btn-check NonPivoting" name="LR" id="btnW"
+                                        autocomplete="off">
                                     <label class="btn btn-outline-secondary" for="btnW">W</label>
 
                                     <input type="radio" class="btn-check" name="LR" id="btnB" autocomplete="off">
@@ -87,6 +89,31 @@
                                 </div>
                             </div>
 
+                            <div class="col-12 mb-3">
+                                <h6>Levels</h6>
+
+                                <div class="btn-group" role="group" aria-label="Levels LR" id="LevelsLR">
+                                    <input type="radio" class="btn-check" name="Levels LR" id="LvlB" autocomplete="off">
+                                    <label class="btn btn-outline-third rounded-start-pill" for="LvlB"> B</label>
+
+                                    <input type="radio" class="btn-check" name="Levels LR" id="Lvl1" autocomplete="off">
+                                    <label class="btn btn-outline-third" for="Lvl1">1</label>
+
+                                    <input type="radio" class="btn-check" name="Levels LR" id="Lvl2" autocomplete="off">
+                                    <label class="btn btn-outline-third" for="Lvl2">2</label>
+
+                                    <input type="radio" class="btn-check Lvl2plus " name="Levels LR" id="Lvl3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-third " for="Lvl3">3</label>
+
+                                    <input type="radio" class="btn-check Lvl2plus" name="Levels LR" id="Lvl4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-third rounded-end-circle" for="Lvl4">4</label>
+
+                                </div>
+
+                            </div>
+
 
 
                         </div>
@@ -102,7 +129,7 @@
                                         <div class="btn-group align-items-center" role=" group" aria-label="I and NHE">
                                             <input type="radio" class="btn-check" name="INHE" id="btnI"
                                                 autocomplete="off">
-                                            <label class="rounded-start-pill btn btn-outline-primary" for=" btnI"> I
+                                            <label class="rounded-start-pill btn btn-outline-primary" for="btnI"> I
                                             </label>
 
                                             <input type="radio" class="btn-check" name="INHE" id="btnNHE"
@@ -203,7 +230,7 @@
                                 <h6>Elements</h6>
 
                                 <div class="btn-group d-flex flex-wrap align-items-center" role=" group"
-                                    aria-label="Basic radio toggle button group">
+                                    aria-label="Basic radio toggle button group" id="ElementOther">
 
                                     <!-- Other Elements -->
                                     <div class="btn-group me-2 mb-2" role="group" aria-label="First group">
@@ -227,30 +254,30 @@
 
                                     <!-- Downgradables Elements -->
                                     <div class="btn-group me-2 mb-2" role="group" aria-label="Downgradable Elements">
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnME"
+                                        <input type="radio" class="btn-check downgradable" name="btnradio" id="btnME"
                                             autocomplete="off">
                                         <label class="btn  btn-outline-secondary rounded-start-pill"
                                             for="btnME">ME</label>
 
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnGL"
+                                        <input type="radio" class="btn-check downgradable" name="btnradio" id="btnGL"
                                             autocomplete="off">
                                         <label class="btn btn-outline-secondary rounded-end-circle "
                                             for="btnGL">GL</label>
                                     </div>
 
                                     <!-- 1 Lvl -->
-                                    <div class="btn-group me-2 mb-2" role="group" aria-label="One Lvl">
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnMi"
+                                    <div class="btn-group me-2 mb-2" role="group" aria-label="One Lvl" id="OneLvl">
+                                        <input type="radio" class="btn-check 1Lvl" name="btnradio" id="btnMi"
                                             autocomplete="off">
                                         <label class="btn btn-outline-third rounded-start-pill" for="btnMi"
                                             title="Mixed Element">Mi</label>
 
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnCrL"
+                                        <input type="radio" class="btn-check 1Lvl" name="btnradio" id="btnCrL"
                                             autocomplete="off">
                                         <label class="btn btn-outline-third" for="btnCrL"
                                             title="Creative Lift">CrL</label>
 
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnCrI"
+                                        <input type="radio" class="btn-check 1Lvl" name="btnradio" id="btnCrI"
                                             autocomplete="off">
                                         <label class="btn btn-outline-third rounded-end-circle " for="btnCrI"
                                             title="Creative Intersection ">CrI</label>
@@ -281,26 +308,26 @@
                             <div class="col-12 mb-3">
                                 <h6>Levels</h6>
 
-                                <div class="btn-group" role="group" aria-label="Levels Others">
-                                    <input type="radio" class="btn-check" name="Levels Other" id="LvlB"
+                                <div class="btn-group" role="group" aria-label="Levels Others" id="LevelOther">
+                                    <input type="radio" class="btn-check" name="Levels Other" id="LvlBOther"
                                         autocomplete="off">
-                                    <label class="btn btn-outline-third rounded-start-pill" for="LvlB"> B</label>
+                                    <label class="btn btn-outline-third rounded-start-pill" for="LvlBOther"> B</label>
 
-                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl1"
+                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl1Other"
                                         autocomplete="off">
-                                    <label class="btn btn-outline-third" for="Lvl1">1</label>
+                                    <label class="btn btn-outline-third" for="Lvl1Other">1</label>
 
-                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl2"
+                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl2Other"
                                         autocomplete="off">
-                                    <label class="btn btn-outline-third" for="Lvl2">2</label>
+                                    <label class="btn btn-outline-third" for="Lvl2Other">2</label>
 
-                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl3"
+                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl3Other"
                                         autocomplete="off">
-                                    <label class="btn btn-outline-third" for="Lvl3">3</label>
+                                    <label class="btn btn-outline-third" for="Lvl3Other">3</label>
 
-                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl4"
+                                    <input type="radio" class="btn-check" name="Levels Other" id="Lvl4Other"
                                         autocomplete="off">
-                                    <label class="btn btn-outline-third rounded-end-circle" for="Lvl4">4</label>
+                                    <label class="btn btn-outline-third rounded-end-circle" for="Lvl4Other">4</label>
 
                                 </div>
 
