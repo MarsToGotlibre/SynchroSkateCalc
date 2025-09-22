@@ -138,7 +138,7 @@ const rules = [
  *   - triggers: CSS selector string, NodeList, or array of elements that will trigger the rule
  *   - targets: CSS selector string, NodeList, or array of elements that will be enabled/disabled
  *   - condition: a function receiving the trigger element, returning true or false
- *                (true → targets.disabled = true, false → targets.disabled = false)
+ *                (true -> targets.disabled = true, false -> targets.disabled = false)
  *
  * @param {Array} rules - An array of rule objects describing input dependencies.
  *
@@ -170,3 +170,25 @@ function setupRules(rules) {
 }
 
 setupRules(rules);
+
+//PCS badge update
+const pcsCo = document.getElementById('pcs-co')
+const pcsCoVal = document.getElementById('pcs-co-val')
+const pcsPr = document.getElementById('pcs-pr')
+const pcsPrVal = document.getElementById('pcs-pr-val')
+const pcsSs = document.getElementById('pcs-ss')
+const pcsSsVal = document.getElementById('pcs-ss-val')
+
+
+const setBadge = (el, badge) => { if (el && badge) badge.textContent = Number(el.value).toFixed(2); };
+setBadge(pcsCo, pcsCoVal);
+setBadge(pcsPr, pcsPrVal);
+setBadge(pcsSs, pcsSsVal);
+[
+    [pcsCo, pcsCoVal],
+    [pcsPr, pcsPrVal],
+    [pcsSs, pcsSsVal]
+].forEach(([el, badge]) => {
+    if (!el || !badge) return;
+    el.addEventListener('input', () => setBadge(el, badge));
+});
