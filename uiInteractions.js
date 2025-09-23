@@ -31,11 +31,11 @@ radioCheckbox(DowngradeCheckbox)
 /* Tab NHE and I */
 
 function NHEandItab() {
-    const NHE = document.getElementById("btnNHE")
-    const I = document.getElementById("btnI")
+    const NHE = document.getElementById("NHE")
+    const I = document.getElementById("I")
 
-    const Pi = document.getElementById("btnPi")
-    const s = document.getElementById("btns")
+    const Pi = document.getElementById("Pi")
+    const s = document.getElementById("s")
 
 
     //disabled the possibility to have I whith s and NHE with Pi
@@ -85,7 +85,7 @@ const rules = [
     {
         //disable pivot button when non pivoting element is selected
         triggers: "#LR input",
-        targets: "#btnP",
+        targets: "#P",
         condition: trigger => trigger.classList.contains("NonPivoting")
     },
     {
@@ -93,7 +93,7 @@ const rules = [
         // pivoting sepcification is selected
         triggers: "#Specifications input",
         targets: "#LR .NonPivoting",
-        condition: () => document.getElementById("btnP").checked
+        condition: () => document.getElementById("P").checked
     },
     {
         //disable downgrades when element isn't downgradable
@@ -122,11 +122,11 @@ const rules = [
         //disable Lvl more than 2 if Artistic (A) is selected
         triggers: "#Specifications input",
         targets: "#LevelsLR .Lvl2plus",
-        condition: trigger => trigger.id == "btnA" && trigger.checked
+        condition: trigger => trigger.id == "A" && trigger.checked
     }, {
         //disable Artistic(A), if Level more than 2 selected
         triggers: "#LevelsLR input",
-        targets: "#btnA",
+        targets: "#A",
         condition: trigger => trigger.classList.contains("Lvl2plus")
     }
 ];
