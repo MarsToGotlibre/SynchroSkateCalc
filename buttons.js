@@ -14,3 +14,17 @@ ClearEntry.addEventListener("click", (event) => {
     ResetButtonsElements()
 })
 
+
+import { ActiveTab, addElement } from "./addElements"
+
+
+
+//button addElement
+document.getElementById("AddElement").addEventListener("click", (event) => {
+    let Elem = document.querySelector("#" + ActiveTab() + " .Element input:checked")
+    console.log(Elem)
+    if (Elem) {
+        addElement()
+    }
+
+})
