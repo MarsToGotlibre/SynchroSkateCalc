@@ -13,24 +13,27 @@ function ReturnElements() {
 }
 
 // Base Element for futur construction
-const BaseElement = {
-   Tab: null,
-   Element: null,
-   Lvl: "1",
-   AdditionalFeature: null,
-   AdditionalFeatureLvl: "B",
-   Specification: null,
-   Downgrades: null,
-   GOE: "0",
-   BaseValue: 0.0,
-   GoeValue: 0,
-   ElementScore: 0
+function BaseElement() {
+   return {
+      Tab: null,
+      Element: null,
+      Lvl: "1",
+      AdditionalFeature: null,
+      AdditionalFeatureLvl: "B",
+      Specification: null,
+      Downgrades: null,
+      GOE: "0",
+      BaseValue: 0.0,
+      GoeValue: 0,
+      ElementScore: 0
+   }
+
 }
 
 
 //modifies Base Element to create a new elem
 export function addElement() {
-   let newElem = BaseElement
+   let newElem = BaseElement()
    let activetab = ActiveTab()
 
    const ifAddTo = (node, nodeParam, ElementEntry) => {
@@ -46,9 +49,10 @@ export function addElement() {
    newElem.Tab = activetab
    if (activetab === "lines-rotating") {
       newElem.Element = document.querySelector("#lines-rotating input[name='LR']:checked").id
-
+      newElem.Specification = "Linear and Rotating"
       ifAddTo("#lines-rotating input[name='Specifications']:checked", "id", "Specification")
       ifAddTo("#lines-rotating input[name='Levels LR']:checked", "value", "Lvl")
+      console.log(newElem)
       return newElem
 
 
@@ -57,8 +61,15 @@ export function addElement() {
       let AdditionalFeature = document.querySelector("#intersection-no-hold input[name='sPi']:checked")
       if (AdditionalFeature) {
          newElem.AdditionalFeature = AdditionalFeature.id
+         console.log(newElem, " boucle if")
          ifAddTo("#intersection-no-hold input[name='Levels sPi']:checked", "value", "AdditionalFeatureLvl")
+         console.log(newElem, " boucle if après ajout de AdditionalFeature Lvl")
+      } else {
+         newElem.AdditionalFeature = ""
+         newElem.AdditionalFeatureLvl = "-"
       }
+      ifAddTo("#intersection-no-hold input[name='Levels INHE']:checked", "value", "Lvl")
+      console.log(newElem)
       return newElem
 
    } else {
@@ -66,6 +77,7 @@ export function addElement() {
       ifAddTo("#other input[name='Downgrades']:checked", "value", "Downgrades")
       ifAddTo("#other input[value='Cr']:checked", "value", "Specification")
       ifAddTo("#other input[name='Levels Other']:checked", "value", "Lvl")
+      console.log(newElem)
       return newElem
    }
 }
