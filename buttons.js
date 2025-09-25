@@ -1,3 +1,6 @@
+import { ActiveTab, addElement } from "./addElements.js"
+
+
 //Clearing Entry
 const buttonsElements = document.querySelectorAll("#ElementComposer input")
 
@@ -15,7 +18,6 @@ ClearEntry.addEventListener("click", (event) => {
 })
 
 
-import { ActiveTab, addElement } from "./addElements"
 
 
 

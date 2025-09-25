@@ -21,7 +21,10 @@ const BaseElement = {
    AdditionalFeatureLvl: "B",
    Specification: null,
    Downgrades: null,
-   GOE: "0"
+   GOE: "0",
+   BaseValue: 0.0,
+   GoeValue: 0,
+   ElementScore: 0
 }
 
 
@@ -46,7 +49,6 @@ export function addElement() {
 
       ifAddTo("#lines-rotating input[name='Specifications']:checked", "id", "Specification")
       ifAddTo("#lines-rotating input[name='Levels LR']:checked", "value", "Lvl")
-      console.log(newElem)
       return newElem
 
 
@@ -57,7 +59,6 @@ export function addElement() {
          newElem.AdditionalFeature = AdditionalFeature.id
          ifAddTo("#intersection-no-hold input[name='Levels sPi']:checked", "value", "AdditionalFeatureLvl")
       }
-      console.log(newElem)
       return newElem
 
    } else {
@@ -65,7 +66,12 @@ export function addElement() {
       ifAddTo("#other input[name='Downgrades']:checked", "value", "Downgrades")
       ifAddTo("#other input[value='Cr']:checked", "value", "Specification")
       ifAddTo("#other input[name='Levels Other']:checked", "value", "Lvl")
-      console.log(newElem)
       return newElem
    }
 }
+
+
+//debugg
+
+window.addElement = addElement
+window.ActiveTab = ActiveTab
