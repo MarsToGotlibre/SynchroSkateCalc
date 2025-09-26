@@ -32,10 +32,11 @@ function BaseElement() {
 
 
 //modifies Base Element to create a new elem
-export function addElement() {
+export function getElement() {
    let newElem = BaseElement()
    let activetab = ActiveTab()
 
+   //if Node Defined, add this nodeParameter to this Element Entry
    const ifAddTo = (node, nodeParam, ElementEntry) => {
       let Node = document.querySelector(node)
       if (Node) {
@@ -65,6 +66,7 @@ export function addElement() {
          ifAddTo("#intersection-no-hold input[name='Levels sPi']:checked", "value", "AdditionalFeatureLvl")
          console.log(newElem, " boucle if après ajout de AdditionalFeature Lvl")
       } else {
+         //Used to find the find the bv in dataset 
          newElem.AdditionalFeature = ""
          newElem.AdditionalFeatureLvl = "-"
       }
@@ -85,5 +87,5 @@ export function addElement() {
 
 //debugg
 
-window.addElement = addElement
+window.getElement = getElement
 window.ActiveTab = ActiveTab

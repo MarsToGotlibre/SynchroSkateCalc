@@ -1,4 +1,7 @@
-import { ActiveTab, addElement } from "./addElements.js"
+import { ActiveTab } from "./addElements.js"
+import { addElement, Program } from "./ScoreCalc.js"
+import { updateSkatingSkills, updateCompostion, updatePresentation, updateFactor } from "./base-value.js"
+import { renderElements } from "./Table.js"
 
 
 //Clearing Entry
@@ -24,9 +27,32 @@ ClearEntry.addEventListener("click", (event) => {
 //button addElement
 document.getElementById("AddElement").addEventListener("click", (event) => {
     let Elem = document.querySelector("#" + ActiveTab() + " .Element input:checked")
-    console.log(Elem)
     if (Elem) {
         addElement()
+        console.log(Program)
+        ResetButtonsElements()
+        renderElements()
+
     }
 
+})
+
+pcsCo.addEventListener("input", () => {
+    updateCompostion()
+})
+
+pcsSs.addEventListener("input", () => {
+    updateSkatingSkills()
+})
+
+pcsPr.addEventListener("input", () => {
+    updatePresentation()
+})
+
+const event = ["input", "keyup", "paste", "change", "click"]
+const pcsFactor = document.getElementById("pcs-factor")
+event.forEach(ev => {
+    pcsFactor.addEventListener(ev, () => {
+        updateFactor()
+    })
 })

@@ -1,6 +1,8 @@
-let SOV = null
+import { Program } from "./ScoreCalc.js";
 
-async function initSOV() {
+export let SOV = null
+
+export async function initSOV() {
    if (SOV) return;
 
    try {
@@ -22,15 +24,13 @@ async function initSOV() {
 
 
 
-function getElementBaseValue(newElem) {
+export function getElementBaseValue(newElem) {
    if (!SOV) {
       initSOV()
    }
    if (newElem.AdditionalFeature !== null) {
-      console.log(SOV.elements[newElem.Element][newElem.Lvl][newElem.AdditionalFeature + newElem.AdditionalFeatureLvl])
-
       newElem.BaseValue = SOV.elements[newElem.Element][newElem.Lvl][newElem.AdditionalFeature + newElem.AdditionalFeatureLvl]
-   } else if (newElem.Specification) {
+   } else if (newElem.Specification) { //If A, P, Cr, Element with same sepcification have the same base value
       newElem.BaseValue = SOV.elements[newElem.Specification][newElem.Lvl]
    }
    else {
@@ -42,3 +42,61 @@ function getElementBaseValue(newElem) {
 
 
 }
+
+export function GOECalculation(Element) {
+   Element.GoeValue = (Element.GOE / 10) * Element.BaseValue
+}
+
+export function getScoreElement(Element) {
+   Element.ElementScore = Math.round((Element.GoeValue + Element.BaseValue) * 100) / 100
+}
+
+export function updateFactor() {
+   Program.Factor = parseFloat(document.getElementById("pcs-factor").value)
+   UpdateComponantScore()
+}
+
+export function updateSkatingSkills() {
+   Program.Component.SkatingSkills = parseFloat(pcsSs.value)
+   UpdateComponantScore()
+}
+
+export function updatePresentation() {
+   Program.Component.Presentation = parseFloat(pcsPr.value)
+   UpdateComponantScore()
+}
+
+export function updateCompostion() {
+   Program.Component.Composition = parseFloat(pcsCo.value)
+   UpdateComponantScore()
+}
+
+export function updateTechnicalElementScore() {
+   Program.TES = 0
+   Program.Elements.forEach(element => {
+      Program.TES += element.ElementScore
+   });
+   Program.TES = Math.round(Program.TES * 100) / 100
+   document.getElementById("tes").innerHTML = Program.TES.toFixed(2)
+   updateTotalSegementScore()
+}
+
+export function UpdateComponantScore() {
+   Program.PCS = 0
+   Object.values(Program.Component).forEach(comp => {
+      Program.PCS += comp
+   })
+   Program.PCS *= Program.Factor
+   Program.PCS = Math.round(Program.PCS * 100) / 100
+   document.getElementById("pcs").innerHTML = Program.PCS.toFixed(2)
+   updateTotalSegementScore()
+
+}
+
+export function updateTotalSegementScore() {
+   Program.TTS = Program.PCS + Program.TES
+   document.getElementById("tss").innerHTML = Program.TTS.toFixed(2)
+
+}
+
+window.initSOV = initSOV()
