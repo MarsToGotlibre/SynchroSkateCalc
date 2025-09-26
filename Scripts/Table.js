@@ -1,4 +1,5 @@
 import { updateTechnicalElementScore } from "./base-value.js";
+import { ResetButtonsElements } from "./buttons.js";
 import { Program } from "./ScoreCalc.js";
 
 export function RenderName(elem) {
@@ -52,4 +53,41 @@ function attachRowHandled() {
       renderElements()
       updateTechnicalElementScore()
    }))
+   tbody.querySelectorAll('.edit').forEach(btn => btn.addEventListener('click', (e) => {
+      const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10);
+      Program.EditingIndex = idx;
+      loadElementIntoUI(Program.Elements[idx]);
+   }));
+
 }
+
+
+
+export function loadElementIntoUI(Element) {
+   if (!Element || Element.length === 0) return
+   ResetButtonsElements()
+
+   document.getElementById(Element.Tab + "-tab").click()
+
+   document.getElementById(Element.Element).checked = true
+   document.querySelector("#" + Element.Tab + " input[value='" + Element.Lvl + "']").checked = true
+
+   if (Element.AdditionalFeature) {
+      document.getElementById(Element.AdditionalFeature).checked = true
+      document.querySelectorAll("#" + Element.Tab + " input[value='" + Element.AdditionalFeatureLvl + "']")[1].checked = true
+   }
+
+   if (Element.Specification === "A" || Element.Specification === "P") {
+      document.getElementById(Element.Specification).checked = true
+   }
+
+   if (Element.Downgrades) {
+      document.querySelector("#" + Element.Tab + " input[value='" + Element.Downgrades + "']").checked = true
+   }
+
+   document.getElementById("GOE" + Element.GOE).checked = true
+
+
+}
+
+window.loadElementIntoUI = loadElementIntoUI

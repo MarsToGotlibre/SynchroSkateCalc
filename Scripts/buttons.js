@@ -7,7 +7,7 @@ import { renderElements } from "./Table.js"
 //Clearing Entry
 const buttonsElements = document.querySelectorAll("#ElementComposer input")
 
-function ResetButtonsElements() {
+export function ResetButtonsElements() {
     buttonsElements.forEach(button => {
         button.checked = false
         button.disabled = false
@@ -30,8 +30,6 @@ document.getElementById("AddElement").addEventListener("click", (event) => {
     if (Elem) {
         addElement()
         console.log(Program)
-        ResetButtonsElements()
-        renderElements()
 
     }
 
