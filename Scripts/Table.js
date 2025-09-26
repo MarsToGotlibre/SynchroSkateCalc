@@ -54,10 +54,31 @@ function attachRowHandled() {
       updateTechnicalElementScore()
    }))
    tbody.querySelectorAll('.edit').forEach(btn => btn.addEventListener('click', (e) => {
-      const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10);
-      Program.EditingIndex = idx;
-      loadElementIntoUI(Program.Elements[idx]);
-   }));
+      const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10)
+      Program.EditingIndex = idx
+      loadElementIntoUI(Program.Elements[idx])
+   }))
+   const rows = tbody.querySelectorAll('tr')
+   rows.forEach(r => {
+      r.addEventListener('dragstart', (ev) => {
+         ev.dataTransfer.setData('text/plain', ev.currentTarget.dataset.index);
+         ev.dataTransfer.effectAllowed = 'move'
+      })
+      r.addEventListener('dragover', (ev) => {
+         ev.preventDefault()
+         ev.dataTransfer.dropEffect = 'move'
+      })
+      r.addEventListener('drop', (ev) => {
+         ev.preventDefault()
+         const src = parseInt(ev.dataTransfer.getData('text/plain'), 10)
+         const dst = parseInt(ev.currentTarget.dataset.index, 10)
+         if (isNaN(src) || isNaN(dst) || src === dst) return
+         const row = Program.Elements.splice(src, 1)[0]
+         Program.Elements.splice(dst, 0, row)
+         renderElements()
+      })
+   })
+
 
 }
 
