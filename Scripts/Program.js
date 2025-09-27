@@ -1,4 +1,4 @@
-import { getElement } from "./GetElementFromUser.js"
+import { getElement } from "./CreateElementFromUser.js"
 import {
    getElementBaseValue, GOECalculation, getScoreElement
 } from "./elementCalculations.js"

@@ -1,4 +1,4 @@
-import { ActiveTab } from "./GetElementFromUser.js"
+import { ActiveTab } from "./CreateElementFromUser.js"
 import { addElement, updateFactor, updateDeduction, UpdatePCSandPCSbadges } from "./Program.js"
 
 //Clearing Entry
