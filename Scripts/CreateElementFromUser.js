@@ -87,5 +87,5 @@ export function getElement() {
 
 //debugg
 
-window.getElement = getElement
-window.ActiveTab = ActiveTab
+/* window.getElement = getElement
+window.ActiveTab = ActiveTab */
