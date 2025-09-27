@@ -1,8 +1,8 @@
-import { getElement } from "./addElements.js"
+import { getElement } from "./GetElementFromUser.js"
 import {
    getElementBaseValue, GOECalculation, getScoreElement,
    updateTechnicalElementScore, updateTotalSegementScore
-} from "./base-value.js"
+} from "./elementCalculations.js"
 import { renderElements } from "./Table.js"
 
 export let Program = {
@@ -25,7 +25,10 @@ window.Program = Program
 export function addElement() {
    const newElem = getElement()
 
-   getElementBaseValue(newElem)
+   let bv = getElementBaseValue(newElem)
+   if (!bv) {
+      return
+   }
    GOECalculation(newElem)
    getScoreElement(newElem)
 

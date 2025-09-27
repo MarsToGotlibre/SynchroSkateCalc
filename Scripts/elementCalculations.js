@@ -1,4 +1,4 @@
-import { Program } from "./ScoreCalc.js";
+import { Program } from "./Program.js";
 
 export let SOV = null
 
@@ -27,6 +27,7 @@ export async function initSOV() {
 export function getElementBaseValue(newElem) {
    if (!SOV) {
       initSOV()
+      return null
    }
    if (newElem.AdditionalFeature !== null) {
       newElem.BaseValue = SOV.elements[newElem.Element][newElem.Lvl][newElem.AdditionalFeature + newElem.AdditionalFeatureLvl]
@@ -39,7 +40,7 @@ export function getElementBaseValue(newElem) {
    if (newElem.Downgrades) {
       newElem.BaseValue += SOV.elements.Downgrades[newElem.Downgrades]
    }
-
+   return true
 
 }
 

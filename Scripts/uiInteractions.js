@@ -1,4 +1,4 @@
-/* Differents Checkboxed */
+/* Differents Checkboxes */
 const SpecificationCheckbox = document.querySelectorAll("#Specifications input")
 const AdditionalFeatureCheckbox = document.querySelectorAll("#Additional_feature input")
 const DowngradeCheckbox = document.querySelectorAll("#Downgrades input")

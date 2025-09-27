@@ -1,6 +1,6 @@
-import { ActiveTab } from "./addElements.js"
-import { addElement, Program } from "./ScoreCalc.js"
-import { updateFactor, updateDeduction, UpdatePCSandPCSbadges } from "./base-value.js"
+import { ActiveTab } from "./GetElementFromUser.js"
+import { addElement } from "./Program.js"
+import { updateFactor, updateDeduction, UpdatePCSandPCSbadges } from "./elementCalculations.js"
 
 //Clearing Entry
 const buttonsElements = document.querySelectorAll("#ElementComposer input")
