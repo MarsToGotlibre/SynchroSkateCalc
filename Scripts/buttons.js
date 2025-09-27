@@ -27,8 +27,7 @@ document.getElementById("AddElement").addEventListener("click", (event) => {
     let Elem = document.querySelector("#" + ActiveTab() + " .Element input:checked")
     if (Elem) {
         addElement()
-        console.log(Program)
-
+        ResetButtonsElements()
     }
 
 })

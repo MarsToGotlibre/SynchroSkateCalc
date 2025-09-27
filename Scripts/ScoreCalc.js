@@ -3,7 +3,6 @@ import {
    getElementBaseValue, GOECalculation, getScoreElement,
    updateTechnicalElementScore, updateTotalSegementScore
 } from "./base-value.js"
-import { ResetButtonsElements } from "./buttons.js"
 import { renderElements } from "./Table.js"
 
 export let Program = {
@@ -18,7 +17,7 @@ export let Program = {
    PCS: 0,
    TES: 0,
    TTS: 0,
-   EditingIndex: null,
+   EditingIndex: null, //When editing an Element, this elementsindex loads Here. See addElement()
    Deductions: 0
 }
 window.Program = Program
@@ -30,7 +29,7 @@ export function addElement() {
    GOECalculation(newElem)
    getScoreElement(newElem)
 
-   if (Program.EditingIndex != null) {
+   if (Program.EditingIndex != null) { //if we are changing an elements content 
       Program.Elements[Program.EditingIndex] = newElem
       Program.EditingIndex = null
    } else {
@@ -39,6 +38,5 @@ export function addElement() {
    updateTechnicalElementScore()
    updateTotalSegementScore()
    renderElements()
-   ResetButtonsElements()
 
 }

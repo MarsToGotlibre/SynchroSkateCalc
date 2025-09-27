@@ -47,17 +47,23 @@ window.RenderName = RenderName
 
 function attachRowHandled() {
    const tbody = document.querySelector('.displayTable');
+
+   //Delete an entry
    tbody.querySelectorAll('.delete').forEach(btn => btn.addEventListener('click', (e) => {
       const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10);
       Program.Elements.splice(idx, 1)
       renderElements()
       updateTechnicalElementScore()
    }))
+
+   //edit an entry : Loads the target you want to edit into UI and register the index you are editing
    tbody.querySelectorAll('.edit').forEach(btn => btn.addEventListener('click', (e) => {
       const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10)
       Program.EditingIndex = idx
       loadElementIntoUI(Program.Elements[idx])
    }))
+
+   //drag and drop order management
    const rows = tbody.querySelectorAll('tr')
    rows.forEach(r => {
       r.addEventListener('dragstart', (ev) => {
@@ -96,6 +102,7 @@ export function loadElementIntoUI(Element) {
    if (Element.AdditionalFeature) {
       document.getElementById(Element.AdditionalFeature).checked = true
       document.querySelectorAll("#" + Element.Tab + " input[value='" + Element.AdditionalFeatureLvl + "']")[1].checked = true
+      //Lvl Done this way because the second node of the nodelist is the AdditionalFeature Lvl
    }
 
    if (Element.Specification === "A" || Element.Specification === "P") {
