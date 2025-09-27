@@ -52,7 +52,7 @@ export function getScoreElement(Element) {
 }
 
 export function updateFactor() {
-   Program.Factor = parseFloat(document.getElementById("pcs-factor").value)
+   Program.Factor = Number(parseFloat(document.getElementById("pcs-factor").value) || 2.67)
    UpdateComponantScore()
 }
 
@@ -93,8 +93,13 @@ export function UpdateComponantScore() {
 
 }
 
+export function updateDeduction() {
+   Program.Deductions = Number(deduct.value || 0)
+   updateTotalSegementScore()
+}
+
 export function updateTotalSegementScore() {
-   Program.TTS = Program.PCS + Program.TES
+   Program.TTS = Program.PCS + Program.TES + Program.Deductions
    document.getElementById("tss").innerHTML = Program.TTS.toFixed(2)
 
 }

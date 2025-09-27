@@ -1,6 +1,6 @@
 import { ActiveTab } from "./addElements.js"
 import { addElement, Program } from "./ScoreCalc.js"
-import { updateSkatingSkills, updateCompostion, updatePresentation, updateFactor } from "./base-value.js"
+import { updateSkatingSkills, updateCompostion, updatePresentation, updateFactor, updateDeduction } from "./base-value.js"
 import { renderElements } from "./Table.js"
 
 
@@ -47,10 +47,14 @@ pcsPr.addEventListener("input", () => {
     updatePresentation()
 })
 
+const deduct = document.getElementById("deduct")
 const event = ["input", "keyup", "paste", "change", "click"]
 const pcsFactor = document.getElementById("pcs-factor")
 event.forEach(ev => {
     pcsFactor.addEventListener(ev, () => {
         updateFactor()
+    })
+    deduct.addEventListener(ev, () => {
+        updateDeduction()
     })
 })

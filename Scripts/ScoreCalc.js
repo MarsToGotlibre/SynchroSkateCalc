@@ -18,7 +18,8 @@ export let Program = {
    PCS: 0,
    TES: 0,
    TTS: 0,
-   EditingIndex: null
+   EditingIndex: null,
+   Deductions: 0
 }
 window.Program = Program
 
