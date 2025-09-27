@@ -56,20 +56,19 @@ export function updateFactor() {
    UpdateComponantScore()
 }
 
-export function updateSkatingSkills() {
-   Program.Component.SkatingSkills = parseFloat(pcsSs.value)
+export function UpdatePCSandPCSbadges() {
+   const Composition = Number(document.getElementById('pcs-co').value || 0)
+   const SkatingSkills = Number(document.getElementById('pcs-ss').value || 0)
+   const Presentation = Number(document.getElementById('pcs-pr').value || 0)
+   document.getElementById('pcs-co-val').textContent = Composition.toFixed(2)
+   document.getElementById("pcs-pr-val").textContent = Presentation.toFixed(2)
+   document.getElementById("pcs-ss-val").textContent = SkatingSkills.toFixed(2)
+   Program.Component.SkatingSkills = SkatingSkills
+   Program.Component.Composition = Composition
+   Program.Component.Presentation = Presentation
    UpdateComponantScore()
 }
 
-export function updatePresentation() {
-   Program.Component.Presentation = parseFloat(pcsPr.value)
-   UpdateComponantScore()
-}
-
-export function updateCompostion() {
-   Program.Component.Composition = parseFloat(pcsCo.value)
-   UpdateComponantScore()
-}
 
 export function updateTechnicalElementScore() {
    Program.TES = 0

@@ -175,25 +175,3 @@ function setupRules(rules) {
 }
 
 setupRules(rules);
-
-//PCS badge update
-const pcsCo = document.getElementById('pcs-co')
-const pcsCoVal = document.getElementById('pcs-co-val')
-const pcsPr = document.getElementById('pcs-pr')
-const pcsPrVal = document.getElementById('pcs-pr-val')
-const pcsSs = document.getElementById('pcs-ss')
-const pcsSsVal = document.getElementById('pcs-ss-val')
-
-
-const setBadge = (el, badge) => { if (el && badge) badge.textContent = Number(el.value).toFixed(2); };
-setBadge(pcsCo, pcsCoVal);
-setBadge(pcsPr, pcsPrVal);
-setBadge(pcsSs, pcsSsVal);
-[
-    [pcsCo, pcsCoVal],
-    [pcsPr, pcsPrVal],
-    [pcsSs, pcsSsVal]
-].forEach(([el, badge]) => {
-    if (!el || !badge) return;
-    el.addEventListener('input', () => setBadge(el, badge));
-});
