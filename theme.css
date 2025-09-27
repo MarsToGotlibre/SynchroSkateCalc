@@ -1,0 +1,25 @@
+:root {
+   --color2: #b4637a;
+   --color3: #7287fd;
+}
+
+
+.btn-outline-third {
+   --bs-btn-color: var(--color2);
+   --bs-btn-border-color: var(--color2);
+   --bs-btn-hover-bg: var(--color2);
+   --bs-btn-hover-border-color: var(--color2);
+   --bs-btn-active-color: #fff;
+   --bs-btn-active-bg: var(--color2);
+   --bs-btn-active-border-color: var(--color2);
+}
+
+.btn-outline-creative {
+   --bs-btn-color: var(--color3);
+   --bs-btn-border-color: var(--color3);
+   --bs-btn-hover-bg: var(--color3);
+   --bs-btn-hover-border-color: var(--color3);
+   --bs-btn-active-color: #fff;
+   --bs-btn-active-bg: var(--color3);
+   --bs-btn-active-border-color: var(--color3);
+}

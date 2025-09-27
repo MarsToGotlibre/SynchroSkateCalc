@@ -2,25 +2,12 @@
  */
 .nav-pills .nav-link {
     border-radius: 50px;
-    color: blueviolet;
-    border: solid 1px rgb(212, 177, 245);
+    /*   color: #04a5e5; */
+    border: solid 1px var(--bs-blue);
     margin: 1px;
 }
 
-.nav-pills .nav-link.active {
-    background-color: blueviolet;
-}
 
-.btn-outline-third {
-    --bs-btn-color: rgb(207, 90, 179);
-    --bs-btn-border-color: rgb(207, 90, 179);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: rgb(207, 90, 179);
-    --bs-btn-hover-border-color: rgb(207, 90, 179);
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: rgb(207, 90, 179);
-    --bs-btn-active-border-color: rgb(207, 90, 179);
-}
 
 
 
