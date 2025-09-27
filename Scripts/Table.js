@@ -1,6 +1,5 @@
-import { updateTechnicalElementScore } from "./elementCalculations.js";
 import { ResetButtonsElements } from "./buttons.js";
-import { Program } from "./Program.js";
+import { Program, updateTechnicalElementScore } from "./Program.js";
 
 export function RenderName(elem) {
    let name = ""
