@@ -163,7 +163,12 @@ function setupRules(rules) {
             trigger.addEventListener("change", () => {
                 const state = rule.condition(trigger)
                 //for each target, disable or enable the taget depending on state
-                targets.forEach(target => target.disabled = state)
+                targets.forEach(target => {
+                    target.disabled = state
+                    if (state) {
+                        target.checked = false
+                    }
+                })
             });
         });
     });
