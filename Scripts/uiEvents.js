@@ -1,5 +1,6 @@
 import { ActiveTab } from "./CreateElementFromUser.js"
 import { addElement, updateFactor, updateDeduction, UpdatePCSandPCSbadges } from "./Program.js"
+import { ElemPreview } from "./ElementPreview.js"
 
 //Clearing Entry
 const buttonsElements = document.querySelectorAll("#ElementComposer input")
@@ -48,4 +49,9 @@ event.forEach(ev => {
     deduct.addEventListener(ev, () => {
         updateDeduction()
     })
+})
+
+//Element Preview
+document.querySelectorAll("#ElementComposer input").forEach(button => {
+    button.addEventListener("click", (event) => { ElemPreview() })
 })

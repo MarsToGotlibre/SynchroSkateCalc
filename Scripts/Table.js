@@ -1,5 +1,6 @@
 import { ResetButtonsElements } from "./uiEvents.js";
 import { Program, updateTechnicalElementScore } from "./Program.js";
+import { ElemPreview } from "./ElementPreview.js";
 
 export function RenderName(elem) {
    let name = ""
@@ -60,6 +61,7 @@ function attachRowHandled() {
       const idx = parseInt(e.currentTarget.closest('tr').dataset.index, 10)
       Program.EditingIndex = idx
       loadElementIntoUI(Program.Elements[idx])
+      ElemPreview()
    }))
 
    //drag and drop order management

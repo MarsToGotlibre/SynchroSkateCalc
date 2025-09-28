@@ -49,37 +49,32 @@ export function getElement() {
 
    newElem.Tab = activetab
    if (activetab === "lines-rotating") {
-      newElem.Element = document.querySelector("#lines-rotating input[name='LR']:checked").id
+      ifAddTo("#lines-rotating input[name='LR']:checked", "id", "Element")
       newElem.Specification = "Linear and Rotating"
       ifAddTo("#lines-rotating input[name='Specifications']:checked", "id", "Specification")
       ifAddTo("#lines-rotating input[name='Levels LR']:checked", "value", "Lvl")
-      console.log(newElem)
       return newElem
 
 
    } else if (activetab === "intersection-no-hold") {
-      newElem.Element = document.querySelector("#intersection-no-hold input[name='INHE']:checked").id
+      ifAddTo("#intersection-no-hold input[name='INHE']:checked", "id", "Element")
       let AdditionalFeature = document.querySelector("#intersection-no-hold input[name='sPi']:checked")
       if (AdditionalFeature) {
          newElem.AdditionalFeature = AdditionalFeature.id
-         console.log(newElem, " boucle if")
          ifAddTo("#intersection-no-hold input[name='Levels sPi']:checked", "value", "AdditionalFeatureLvl")
-         console.log(newElem, " boucle if après ajout de AdditionalFeature Lvl")
       } else {
          //Used to find the find the bv in dataset 
          newElem.AdditionalFeature = ""
          newElem.AdditionalFeatureLvl = "-"
       }
       ifAddTo("#intersection-no-hold input[name='Levels INHE']:checked", "value", "Lvl")
-      console.log(newElem)
       return newElem
 
    } else {
-      newElem.Element = document.querySelector("#other input[name='Other']:checked").id
+      ifAddTo("#other input[name='Other']:checked", "id", "Element")
       ifAddTo("#other input[name='Downgrades']:checked", "value", "Downgrades")
       ifAddTo("#other input[value='Cr']:checked", "value", "Specification")
       ifAddTo("#other input[name='Levels Other']:checked", "value", "Lvl")
-      console.log(newElem)
       return newElem
    }
 }
