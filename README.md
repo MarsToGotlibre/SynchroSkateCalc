@@ -8,8 +8,7 @@ This project aims to:
 
 - Provide a synchronized skating program calculator  
 - Adapt the UI for synchro skating elements  
-- Allow users to preset and edit a program depending on the category
 
-### Long-term goals
-- Multi-language support  
-- Support for historical elements and calculations  
+
+## Data
+The data for the base value comes from the ISU Communication No. 2693, valid as of July 1, 2025 available [here](https://www.usfigureskating.org/sites/default/files/media-files/ISU%202693-ISU-SYS-Scale-of-Values-1743584090-6664.pdf)
