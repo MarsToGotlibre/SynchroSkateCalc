@@ -52,3 +52,13 @@ h2 {
         font-size: .8rem;
     }
 }
+
+.fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: Poppins;
+}
