@@ -38,6 +38,9 @@ export function getElementBaseValue(newElem) {
    if (newElem.Downgrades) {
       newElem.BaseValue += SOV.elements.Downgrades[newElem.Downgrades]
    }
+   if (!newElem.BaseValue) {
+      return null
+   }
    return true
 
 }
