@@ -3,6 +3,7 @@ import {
    getElementBaseValue, GOECalculation, getScoreElement
 } from "./elementCalculations.js"
 import { renderElements } from "./Table.js"
+import { ResetPreview } from "./ElementPreview.js"
 
 export let Program = {
    Elements: [],
@@ -40,6 +41,7 @@ export function addElement() {
    updateTechnicalElementScore()
    updateTotalSegementScore()
    renderElements()
+   ResetPreview()
 
 }
 
