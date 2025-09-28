@@ -73,4 +73,9 @@ body {
         font-size: 0.9rem;
         padding: 0.3rem 0.35rem;
     }
+
+    #pills-tab button,
+    .tab-pane input {
+        font-size: 0.9rem;
+    }
 }
