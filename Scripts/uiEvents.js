@@ -1,6 +1,6 @@
 import { ActiveTab } from "./CreateElementFromUser.js"
 import { addElement, updateFactor, updateDeduction, UpdatePCSandPCSbadges } from "./Program.js"
-import { ElemPreview } from "./ElementPreview.js"
+import { ElemPreview, ResetPreview } from "./ElementPreview.js"
 
 //Clearing Entry
 const buttonsElements = document.querySelectorAll("#ElementComposer input")
@@ -16,6 +16,7 @@ export function ResetButtonsElements() {
 const ClearEntry = document.getElementById("ClearEntry")
 ClearEntry.addEventListener("click", (event) => {
     ResetButtonsElements()
+    ResetPreview()
 })
 
 
