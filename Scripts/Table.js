@@ -1,5 +1,5 @@
 import { ResetButtonsElements } from "./uiEvents.js";
-import { Program, updateTechnicalElementScore } from "./Program.js";
+import { Program, updateTechnicalElementScore,updateTotalBaseValue } from "./Program.js";
 import { ElemPreview } from "./ElementPreview.js";
 
 export function RenderName(elem) {
@@ -54,6 +54,7 @@ function attachRowHandled() {
       Program.Elements.splice(idx, 1)
       renderElements()
       updateTechnicalElementScore()
+      updateTotalBaseValue()
    }))
 
    //edit an entry : Loads the target you want to edit into UI and register the index you are editing

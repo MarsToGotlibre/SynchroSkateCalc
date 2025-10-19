@@ -16,6 +16,7 @@ export let Program = {
    deductions: 0,
    PCS: 0,
    TES: 0,
+   BV:0, //Total Base Value
    TTS: 0,
    EditingIndex: null, //When editing an Element, this elementsindex loads Here. See addElement()
    Deductions: 0
@@ -40,6 +41,7 @@ export function addElement() {
    }
    updateTechnicalElementScore()
    updateTotalSegementScore()
+   updateTotalBaseValue()
    renderElements()
    ResetPreview()
 
@@ -85,6 +87,16 @@ export function UpdateComponantScore() {
    updateTotalSegementScore()
 
 }
+
+export function updateTotalBaseValue(){
+   Program.BV=0
+   Program.Elements.forEach(elem=>{
+      Program.BV+=elem.BaseValue
+   })
+   Program.TES = Math.round(Program.BV*100)/100
+   document.getElementById("tbv").innerHTML=Program.BV.toFixed(2)
+}
+window.updateTotalBaseValue =updateTotalBaseValue
 
 export function updateDeduction() {
    Program.Deductions = Number(deduct.value || 0)
