@@ -79,3 +79,9 @@ body {
         font-size: 0.9rem;
     }
 }
+
+@media (min-width: 992px) and (max-width: 1030px) {   
+    .components label {
+        font-size: 14px;
+    }
+}
